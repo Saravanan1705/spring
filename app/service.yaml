@@ -18,6 +18,10 @@ spec:
     port: 8778
     protocol: TCP
     targetPort: 8778
+  - name: 3000-tcp
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
   selector:
     app: spring-petclinic
   sessionAffinity: None
