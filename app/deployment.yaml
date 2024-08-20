@@ -11,7 +11,7 @@ metadata:
     app.openshift.io/runtime: java
   name: spring-petclinic
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: spring-petclinic
@@ -21,9 +21,9 @@ spec:
         app: spring-petclinic
     spec:
       containers:
-      - name: spring-petclinic
+      - name: chatbot
         imagePullPolicy: Always
-        image: quay.io/service-binding/spring-petclinic:latest
+        image: docker.io/saravana1705/chatbot:v1
         livenessProbe:
           failureThreshold: 5
           httpGet:
