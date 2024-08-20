@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/instance: spring-petclinic
     app.kubernetes.io/name: spring-petclinic
     app.kubernetes.io/part-of: spring-petclinic
-    app.openshift.io/runtime: java
+    app.openshift.io/runtime: nodejs
   name: spring-petclinic
 spec:
   replicas: 1
@@ -35,12 +35,6 @@ spec:
           successThreshold: 1
           timeoutSeconds: 1
         ports:
-        - containerPort: 8080
-          protocol: TCP
-        - containerPort: 8443
-          protocol: TCP
-        - containerPort: 8778
-          protocol: TCP
         - containerPort: 3000
           protocol: TCP
         readinessProbe:
