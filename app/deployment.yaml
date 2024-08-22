@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: spring-petclinic
+    app: chatbot
     app.kubernetes.io/component: web
-    app.kubernetes.io/instance: spring-petclinic
-    app.kubernetes.io/name: spring-petclinic
-    app.kubernetes.io/part-of: spring-petclinic
+    app.kubernetes.io/instance: chatbot
+    app.kubernetes.io/name: chatbot
+    app.kubernetes.io/part-of: chatbot
     app.openshift.io/runtime: nodejs
-  name: spring-petclinic
+  name: chatbot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring-petclinic
+      app: chatbot
   template:
     metadata:
       labels:
-        app: spring-petclinic
+        app: chatbot
     spec:
       containers:
       - name: chatbot
